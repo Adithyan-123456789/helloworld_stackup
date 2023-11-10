@@ -13,10 +13,13 @@ const UserLogin = (props) => {
     const [isDetailsFounded, setPermission] = useState(true);
     const history = useHistory();
 
+    /*Replace the url in the useFetch with the path to users email and password */
     const { data, pending, error } = useFetch('http://localhost:8000/users');
     console.log(data);
     const handleSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault();  // to prevent the reload due to submit action
+
+        //Searching for the existance of a user
         const userDetails = data.filter((eachPersonDetails) =>
             (eachPersonDetails.email === email && eachPersonDetails.password === password))
 
@@ -24,7 +27,7 @@ const UserLogin = (props) => {
             setPermission(false);
         } else {
             props.setId(userDetails[0].id);
-            console.log(userDetails[0].id);
+            localStorage.setItem('userId', userDetails[0].id);
             setPermission(true);
             console.log("Account founded!!!!");
             history.push('/home');

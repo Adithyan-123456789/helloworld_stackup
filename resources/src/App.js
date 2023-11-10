@@ -10,16 +10,22 @@ import UserLogin from './UserLogin';
 import { useState } from 'react';
 import SignInDetails from './CreateAccount';
 import TodoListHeader from './ToDoListHeader';
+import EditWindow from './EditWindow';
 
 function App() {
 
-  const [id, setId] = useState();
+
+
+  const [id, setId] = useState(localStorage.getItem('userId') || '');
+
+  /*Replace the url in the useFetch with the path to a specific user using id*/
   const { data, pending, error } = useFetch('http://localhost:8000/users/' + id);
 
   const [isSignedIn, setSignInStatus] = useState(() => {
     const value = localStorage.getItem('isSignedIn');
     return value === 'true';
   });
+
 
   const [filteredContent, setFilteredContent] = useState(null);
   const [isContentPresent, setContentStatus] = useState(false);
@@ -39,7 +45,8 @@ function App() {
               <Route exact path="/home">
                 {data && <TodoListHeader taskData={data} setContentStatus={setContentStatus} filteredContent={filteredContent} setFilteredContent={setFilteredContent} />}
                 {error && <div> {error}</div>}
-                {pending && <div>Loading!!!!</div>}
+
+                {pending && <div className='loading-container'><img src='/public/loadingGif.gif'></img></div>}
                 <div className='todoList-block'>
                   {(data && !isContentPresent) && <TodoList taskData={data.task} setId={setId} id={id} />}
                   {(data && isContentPresent) && <TodoList taskData={filteredContent} setId={setId} id={id} />}
@@ -63,6 +70,9 @@ function App() {
                 <SignInDetails />
               </Route>
 
+              <Route path="/editDetails">
+                <EditWindow />
+              </Route>
             </Switch>
           </div>
         </header>

@@ -10,10 +10,12 @@ const SignInDetails = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const data = { email, password, username, task };
+        const data = { email, password, username, task }; /*change the variable names as you need
+        .Also use refractor to make multiple changes*/
 
+        //Replace the url with a path to the users email and password for adding a new user.
         fetch(' http://localhost:8000/users', {
-            method: 'POST',
+
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })

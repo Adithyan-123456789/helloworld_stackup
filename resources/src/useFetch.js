@@ -8,7 +8,7 @@ const useFetch = (url) => {
 
     useEffect(() => {
 
-        fetch(url)
+        fetch(url) //don't change this url.
             .then(res => {
                 if (!res.ok) {
                     isError(true);
