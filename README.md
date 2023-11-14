@@ -13,7 +13,6 @@ helloworld
 ## Link to product walkthrough
 https://www.loom.com/share/892def3ce8834b899fa2a0fd71ba4381
 ## How it Works ?
-1. Explaining the working of project
 1)To create an account, users need to register, and their information is stored in the backend.
 2)Upon logging in,users are directed to a page displaying all the tasks
 3)Task can be added using the + icon on left side of the taskbar
