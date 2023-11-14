@@ -1,19 +1,20 @@
 import { useParams, Link } from "react-router-dom/cjs/react-router-dom";
 import useFetch from "./useFetch";
 
-const TaskDetails = () => {
+const TaskDetails = (props) => {
 
     const { taskId } = useParams();
+    props.setTaskId(taskId);
     const { id } = useParams();
 
     //change the url with a path to a specific user using id for userid
     const { data: taskList, pending, error } = useFetch('http://localhost:8000/users/' + id);
-    console.log(taskId - 1);
+
     const handleDeleteButton = () => {
 
         /*Replace the url with the path to a specific task using id and taskid */
         fetch('url', {
-            method: 'DELETE',
+            method: 'POST',
             headers: { 'Content-Type': 'application/json' }
         })
             .then((res) => {
@@ -28,15 +29,14 @@ const TaskDetails = () => {
             })
     }
 
-
     return (
         <div className="task-manager">
-            {pending && <div className="loading-container"><img src='/public/loadingGif.gif'></img></div>}
+            {pending && <div className="loading-container"><img src='./transparentLoading.gif' alt="An animated logo of an infinity symbol"></img></div>}
             {error && <p> {error}</p>}
             {taskList && <div className="task-view">
                 <div className="login-button-section">
-                    <button className="button-configuration" onClick={() => { handleDeleteButton() }}>Complete</button>
-                    <Link to="/editDetails"> <button className="button-configuration" onClick={() => { handleDeleteButton() }}>Edit</button></Link>
+                    <Link to="/home" className="links"><button className="button-configuration" onClick={() => { handleDeleteButton() }}>Complete</button></Link>
+                    <Link to="/editDetails" className="links"> <button className="button-configuration" >Edit</button></Link>
                 </div>
                 <h2>{taskList.task[taskId - 1].taskName}</h2>
                 <label> Description : </label>

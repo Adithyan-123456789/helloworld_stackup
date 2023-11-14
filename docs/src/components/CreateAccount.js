@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
+
+
 
 const SignInDetails = () => {
 
@@ -6,16 +9,18 @@ const SignInDetails = () => {
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
     const task = [];
+    const history = useHistory();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
+        history.push('/');
         const data = { email, password, username, task }; /*change the variable names as you need
         .Also use refractor to make multiple changes*/
+        console.log(data);
 
         //Replace the url with a path to the users email and password for adding a new user.
         fetch(' http://localhost:8000/users', {
-
+            method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })

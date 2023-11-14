@@ -7,7 +7,7 @@ const NavBar = ({ isSignedIn, setSignInStatus, data }) => {
     useEffect(() => {
 
         const intervalId = setInterval(() => {
-            setDateAndTime(new Date)
+            setDateAndTime(new Date())
         }, 1000);
 
         return () => clearInterval(intervalId);
@@ -17,15 +17,16 @@ const NavBar = ({ isSignedIn, setSignInStatus, data }) => {
     return (
         <div className="navigation">
             <div className="display-details">
-                <span className="nav-logo">Logo</span>
+                <span className="nav-logo">Task Manager</span>
                 <span className="nav-time">{dataAndTime.toLocaleTimeString()}</span>
-                {(data && isSignedIn) && <span className="nav-username">{data.username.toUpperCase()}</span>}
+                {(data && isSignedIn) && <span className="nav-username">{(data.username)}</span>}
             </div>
             <div className="nav-links" >
                 {isSignedIn && <Link to='/home' className="links" >Home</Link>}
                 {!isSignedIn && <Link to='/' className="links" >Sign in</Link>}
                 <Link to='/aboutUs' className="links" >About us</Link>
                 {isSignedIn && <Link to='/' className="links"><span onClick={() => {
+                    localStorage.setItem('userId', '');
                     localStorage.setItem('isSignedIn', 'false');
                     setSignInStatus(false);
                 }}>Sign out</span></Link>}

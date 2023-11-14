@@ -5,7 +5,6 @@ const TodoListHeader = (props) => {
 
     const [status, setStatus] = useState('');
 
-
     useEffect(() => {
 
         const filteredData = props.taskData.task.filter((eachTask) => eachTask.status === status);
@@ -15,6 +14,8 @@ const TodoListHeader = (props) => {
         } else {
             props.setFilteredContent(filteredData);
             props.setContentStatus(true);
+            console.log("Filtered data views ");
+            console.log(status);
             console.log(filteredData);
         }
 

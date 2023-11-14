@@ -8,7 +8,7 @@ const useFetch = (url) => {
 
     useEffect(() => {
 
-        fetch(url) //don't change this url.
+        fetch(url) //don't change this url.Evede onum chayanda.
             .then(res => {
                 if (!res.ok) {
                     isError(true);

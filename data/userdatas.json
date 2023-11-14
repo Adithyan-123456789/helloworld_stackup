@@ -1,0 +1,197 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "email": "fbatters0@bizjournals.com",
+            "password": "rK2>|LM1qs<,,zf",
+            "username": "Akash kumar R",
+            "task": [
+                {
+                    "taskName": "Call mom",
+                    "dueDate": "05-04-2023",
+                    "status": "in progress",
+                    "taskId": 1,
+                    "description": "Lorem ipsum dolor sit amet"
+                },
+                {
+                    "taskName": "Pay bills",
+                    "dueDate": "06-10-2023",
+                    "status": "in progress",
+                    "taskId": 2,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "email": "cmcdougall1@cmu.edu",
+            "password": "nQ5+hCRp4lf.g",
+            "username": "Akash kumar R",
+            "task": []
+        },
+        {
+            "id": 3,
+            "email": "ncraiker2@europa.eu",
+            "password": "kN5|hnOzcJV5$",
+            "username": "Akash kumar R",
+            "task": [
+                {
+                    "taskName": "Schedule appointment",
+                    "dueDate": "20-02-2023",
+                    "status": "in progress",
+                    "taskId": 1,
+                    "description": "Nam libero tempore"
+                },
+                {
+                    "taskName": "Go for a run",
+                    "dueDate": "26-10-2023",
+                    "status": "completed",
+                    "taskId": 2,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+                },
+                {
+                    "taskName": "Write a blog post",
+                    "dueDate": "01-01-2023",
+                    "status": "future",
+                    "taskId": 3,
+                    "description": "Et harum quidem rerum facilis est et expedita distinctio."
+                },
+                {
+                    "taskName": "Clean the house",
+                    "dueDate": "19-12-2023",
+                    "status": "future",
+                    "taskId": 4,
+                    "description": "consectetur adipiscing elit."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "email": "choulison3@acquirethisname.com",
+            "password": "pZ2.>cO#2>",
+            "username": "Akash kumar R",
+            "task": [
+                {
+                    "taskName": "Read a book",
+                    "dueDate": "10-06-2023",
+                    "status": "completed",
+                    "taskId": 1,
+                    "description": "Et harum quidem rerum facilis est et expedita distinctio."
+                },
+                {
+                    "taskName": "Finish report",
+                    "dueDate": "24-04-2023",
+                    "status": "future",
+                    "taskId": 2,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "email": "kcrannage4@seattletimes.com",
+            "password": "hB3(9F>B@GYzFHN",
+            "task": [
+                {
+                    "taskName": "Schedule appointment",
+                    "dueDate": "17-07-2023",
+                    "status": "completed",
+                    "taskId": 1,
+                    "description": "Et harum quidem rerum facilis est et expedita distinctio."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "email": "dskones5@lycos.com",
+            "password": "gG8&*c|{ZrN",
+            "task": [
+                {
+                    "taskName": "Pay bills",
+                    "dueDate": "06-09-2023",
+                    "status": "completed",
+                    "taskId": 1,
+                    "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident."
+                },
+                {
+                    "taskName": "Organize closet",
+                    "dueDate": "19-10-2023",
+                    "status": "future",
+                    "taskId": 2,
+                    "description": "cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus."
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "email": "kpeaden6@xrea.com",
+            "password": "gR9%y'4wX}a3<6",
+            "task": [
+                {
+                    "taskName": "Finish report",
+                    "dueDate": "07-10-2023",
+                    "status": "in progress",
+                    "taskId": 1,
+                    "description": "id est laborum et dolorum fuga."
+                },
+                {
+                    "taskName": "Schedule appointment",
+                    "dueDate": "23-06-2023",
+                    "status": "in progress",
+                    "taskId": 2,
+                    "description": "Et harum quidem rerum facilis est et expedita distinctio."
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "email": "pcater7@yandex.ru",
+            "password": "sA2,fu|d\"iENC\".k",
+            "task": [
+                {
+                    "taskName": "Buy groceries",
+                    "dueDate": "31-08-2023",
+                    "status": "in progress",
+                    "taskId": 1,
+                    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "email": "delsmore8@zimbio.com",
+            "username": "Akash kumar R",
+            "password": "nB3#ZezY",
+            "task": [
+                {
+                    "taskName": "Schedule appointment",
+                    "dueDate": "24-03-2023",
+                    "status": "completed",
+                    "taskId": 1,
+                    "description": "Lorem ipsum dolor sit amet"
+                },
+                {
+                    "taskName": "Organize closet",
+                    "dueDate": "04-05-2023",
+                    "status": "in progress",
+                    "taskId": 2,
+                    "description": "id est laborum et dolorum fuga."
+                },
+                {
+                    "taskName": "Pay bills",
+                    "dueDate": "17-12-2022",
+                    "status": "future",
+                    "taskId": 3,
+                    "description": "id est laborum et dolorum fuga."
+                },
+                {
+                    "taskName": "Schedule appointment",
+                    "dueDate": "05-11-2023",
+                    "status": "future",
+                    "taskId": 4,
+                    "description": "cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "tasks": [
+        {
+            "taskId": 1,
+            "taskName": "Buy groceries",
+            "dueDate": "10/24/2023",
+            "status": "in progress",
+            "description": "Lorem ipsum dolor sit amet",
+            "userId": 1
+        },
+        {
+            "taskId": 2,
+            "taskName": "Pay bills",
+            "dueDate": "12/4/2022",
+            "status": "completed",
+            "description": "consectetur adipiscing elit.",
+            "userId": 1
+        },
+        {
+            "taskId": 3,
+            "taskName": "Call mom",
+            "dueDate": "6/4/2023",
+            "status": "future",
+            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+            "userId": 2
+        },
+        {
+            "taskId": 4,
+            "taskName": "Go for a run",
+            "dueDate": "10/31/2023",
+            "status": "in progress",
+            "description": "consectetur adipiscing elit.",
+            "userId": 2
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "email": "hhughes0@icq.com",
+            "password": "hS3/Q}d+g~'4$zVQ",
+            "username": "Akshay Kumar K"
+        },
+        {
+            "id": 2,
+            "email": "nberlin1@forbes.com",
+            "password": "tV9$r*_4HPa",
+            "username": "Akash kumar R"
+        }
+    ],
+    "routes": {
+        "/tasks/:taskId": "/tasks/:taskId"
+    }
+}

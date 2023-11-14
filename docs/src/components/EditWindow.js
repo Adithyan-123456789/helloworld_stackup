@@ -1,15 +1,23 @@
-import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
-const AddTask = (props) => {
+const EditWindow = (props) => {
 
-    const [taskName, setTask] = useState('');
-    const [dueDate, setDate] = useState('');
-    const [description, setDescription] = useState('');
-    const [status, setStatus] = useState('');
-    const [isValidDueDate, setDueDateStatus] = useState(true);
+    const format = (date) => {
+        const [dd, mm, yyyy] = date.split('-');
+        return (yyyy + '-' + mm + '-' + dd);
+    }
+
+
+    const [taskValue, setTask] = useState(props.data.task[props.taskId].taskName);
+    const [dueDate, setDate] = useState(format(props.data.task[props.taskId].dueDate));
+    const [description, setDescription] = useState(props.data.task[props.taskId].description);
+    const [status, setStatus] = useState(props.data.task[props.taskId].status);
+    const [ValidDueDate, setDueDateStatus] = useState(true);
     const history = useHistory();
 
+    console.log("Due Date");
+    console.log(dueDate);
     useEffect(() => {
         if ((new Date(dueDate).getTime() >= (new Date()).getTime())) {
             setDueDateStatus(true);
@@ -18,16 +26,17 @@ const AddTask = (props) => {
         }
     }, [dueDate])
 
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (isValidDueDate) {
+        if (ValidDueDate) {
             setDueDateStatus(true);
-            const data = { taskName, dueDate, status, description };
+            const data = { taskValue, dueDate, status, description };
             console.log(data);
 
             //Replace the url with a path to a specific user using props.id for getting  userid
-            fetch(`http://localhost:8000/users/${props.id}/task`, {
+            fetch(`http://localhost:8000/users/${props.userId}/task`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
@@ -41,26 +50,27 @@ const AddTask = (props) => {
                 })
                 .catch((error) => {
                     console.log(error.message);
-                })
+                });
+            history.goBack();
         }
     }
-    return (
 
+    return (
         <div className="login-container">
-            <h1>Add A New Task</h1>
+            <h1>Edit The Details</h1>
             <form onSubmit={handleSubmit}>
                 <div className="login-details">
                     <label>Task : </label>
                     <input
                         type="text"
                         required
-                        value={taskName}
+                        value={taskValue}
                         className="input-box"
                         onChange={(event) => {
                             setTask(event.target.value);
                         }}>
                     </input>
-                    <label> Due Date : {!isValidDueDate && <span>Invalid Date</span>}</label>
+                    <label> Due Date : {!ValidDueDate && <span>Invalid Date</span>}</label>
                     <input
                         type="date"
                         required
@@ -96,4 +106,4 @@ const AddTask = (props) => {
     );
 }
 
-export default AddTask;
+export default EditWindow;

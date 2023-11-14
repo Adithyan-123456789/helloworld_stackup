@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useFetch from "./useFetch";
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom";
 
 const UserLogin = (props) => {
 
-    useEffect(() => {
-
-    }, [])
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,11 +14,14 @@ const UserLogin = (props) => {
     const { data, pending, error } = useFetch('http://localhost:8000/users');
     console.log(data);
     const handleSubmit = (event) => {
-        event.preventDefault();  // to prevent the reload due to submit action
+        event.preventDefault();
+        // to prevent the reload due to submit action
 
         //Searching for the existance of a user
         const userDetails = data.filter((eachPersonDetails) =>
             (eachPersonDetails.email === email && eachPersonDetails.password === password))
+        console.log("User details");
+        console.log(userDetails);
 
         if (userDetails.length === 0) {
             setPermission(false);
@@ -36,11 +36,12 @@ const UserLogin = (props) => {
         }
     }
     return (
-        <div className="login-container">
 
+        <div className="login-container">
+            {pending && <div className='loading-container'><img src='./transparentLoading.gif' alt='An animated logo of an infinity symbol'></img></div>}
             <h1>Login into Your Account</h1>
             <form onSubmit={handleSubmit}>
-                {!isDetailsFounded && <p>Email id or password is wrong</p>}
+                {!isDetailsFounded && <span>Email id or password is wrong</span>}
                 <div className="login-details">
                     <label>Email Id :</label>
                     <input

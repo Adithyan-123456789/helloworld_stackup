@@ -6,7 +6,6 @@ const SideNav = () => {
         <div className="side-nav">
             <Link to="/addTask"><button className="side-nav-button-add" ></button></Link>
             <button className="side-nav-button-clearall"></button>
-            <button className="side-nav-button"></button>
         </div>
     );
 }

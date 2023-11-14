@@ -12,7 +12,16 @@ body {
   height: 100%;
   left: 0px;
   top: 0px;
-  background-color: white;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container img {
+  width: 150px;
+  height: 150px;
+
 }
 
 .navigation {
@@ -29,9 +38,26 @@ body {
 
 .display-details {
   margin-left: 80px;
+  display: flex;
+  align-items: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-size: large;
+}
+
+.display-details span {
+  margin-right: 10px;
+}
+
+.nav-logo {
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px orange;
+  cursor: pointer;
 }
 
 .nav-time {
@@ -213,7 +239,9 @@ body {
 
 .login-container {
   margin-top: 100px;
-  background-color: aqua;
+  background: rgba(209, 194, 194, 0.74);
+  box-shadow: 0px 0px 10px black;
+  border-color: #0000;
   width: 500px;
   height: 400px;
   display: flex;
@@ -233,7 +261,7 @@ body {
   scale: 1.1;
 }
 
-.login-container p {
+.login-container span {
   color: red;
 }
 
@@ -258,6 +286,10 @@ body {
   align-items: center;
 }
 
+.login-button-section span {
+  color: black;
+}
+
 
 .input-box {
   margin-bottom: 10px;
@@ -279,9 +311,11 @@ body {
 }
 
 .create-account {
+  margin-top: 100px;
   width: 500px;
   height: 400px;
-  background-color: aqua;
+  background-color: rgba(209, 194, 194, 0.74);
+
   border: 2px solid #3498db;
   display: flex;
   flex-direction: column;
