@@ -11,7 +11,7 @@ One distinctive feature of TaskEase is its dynamic task visualization. As tasks 
 ## Team Id
 helloworld
 ## Link to product walkthrough
-[https://www.loom.com/share/892def3ce8834b899fa2a0fd71ba4381]
+https://www.loom.com/share/892def3ce8834b899fa2a0fd71ba4381
 ## How it Works ?
 1. Explaining the working of project
 1)To create an account, users need to register, and their information is stored in the backend.
